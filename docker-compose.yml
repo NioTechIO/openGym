@@ -44,7 +44,7 @@ services:
       BACKEND: api
       PORT: "3000"
       RESOLVER: 127.0.0.11
-      CF_CONNECTING_IP: $$http_cf_connecting_ip
+      CF_CONNECTING_IP: ${CF_CONNECTING_IP:-}
       MEDIA_UPLOAD_MAX: ${MEDIA_UPLOAD_MAX:-96m}
     expose:
       - "80"
